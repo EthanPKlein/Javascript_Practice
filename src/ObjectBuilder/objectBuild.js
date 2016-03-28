@@ -1,4 +1,4 @@
-console.log("Hello World!");
+'use strict';
 
 // object literal
 var car = {
@@ -24,3 +24,17 @@ var greeter = function(firstName, lastName) {
 
 console.log(greeter("Tom","Carpenter"));
 console.log(greeter("Chris","Christenson"));
+
+// creating base object with keyword new
+var company =  new Object();
+company.name = "Bob's Steamroller Emporium";
+company.annualIncome = 5000000;
+company.employeeCount = 210;
+
+company.calculateAnnualIncomePerEmployee = function() {
+	return this.annualIncome / this.employeeCount;
+}
+
+console.log(company);
+console.log(company.calculateAnnualIncomePerEmployee());
+
